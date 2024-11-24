@@ -61,4 +61,4 @@ if img_file_buffer is not None:
 
 else:
     st.error('This file could not be read', icon="🚨")      
->>>>>>> 27accb1838cafff31d6bc834dd61e5369ca843df
+
