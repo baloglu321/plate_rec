@@ -16,6 +16,7 @@ import matplotlib.pyplot as plt
 
 import torch
 from paddleocr import PaddleOCR
+import os
  
 # Text parameters.
 FONT_FACE = cv2.FONT_HERSHEY_SIMPLEX
@@ -95,6 +96,7 @@ def recognize_plate_easyocr(img, coords,reader,region_threshold):
 
 class YOLO_MODEL:
     def __init__(self, weights, device: Optional[str] = None):
+        path=os.getcwd()
         if device is not None and "cuda" in device and not torch.cuda.is_available():
             raise Exception(
                 "Selected device='cuda', but cuda is not available to Pytorch."
@@ -104,7 +106,7 @@ class YOLO_MODEL:
             device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
         # load model
-        self.model = torch.hub.load( './yolov5', 'custom',source ='local', path=weights, force_reload=True)
+        self.model = torch.hub.load( f'{path}/yolov5', 'custom',source ='local', path=weights, force_reload=True)
 
     def __call__(
         self,
