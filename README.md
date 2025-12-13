@@ -1021,9 +1021,7 @@ Any other relevant information
 
 <div align="center">
 
-## 🌟 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=baloglu321/plate_rec&type=Date)](https://star-history.com/#baloglu321/plate_rec&Date)
 
 ## 📈 Project Statistics
 
