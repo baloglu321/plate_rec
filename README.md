@@ -348,7 +348,7 @@ flowchart LR
     
     style C fill:#4CAF50
     style F fill:#2196F3
-    style H fill:#FFC107
+    style H fill:#FFC107,stroke:#333,stroke-width:3px,color:#000
     style J fill:#FF4B4B
 ```
 
