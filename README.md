@@ -346,7 +346,7 @@ flowchart LR
     H --> I[Draw Label]
     I --> J[Display Result]
     
-    style C fill:#4CAF50
+    style C fill:#4CAF50,stroke:#333,stroke-width:3px,color:#000
     style F fill:#2196F3,stroke:#333,stroke-width:3px,color:#000
     style H fill:#FFC107,stroke:#333,stroke-width:3px,color:#000
     style J fill:#FF4B4B,stroke:#333,stroke-width:3px,color:#000
