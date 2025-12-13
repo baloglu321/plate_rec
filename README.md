@@ -135,8 +135,9 @@ graph TB
     style A fill:#FF4B4B
     style L fill:#4CAF50
     style M fill:#2196F3
-    style F fill:#FFC107
-    style G fill:#FFC107
+    style F fill:#FFC107,stroke:#333,stroke-width:3px,color:#000
+    style G fill:#FFC107,stroke:#333,stroke-width:3px,color:#000
+    style H fill:#FFC107,stroke:#333,stroke-width:3px,color:#000
 ```
 
 ## 🔧 System Components
