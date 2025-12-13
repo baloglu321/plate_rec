@@ -1023,28 +1023,8 @@ Any other relevant information
 
 
 
-## 📈 Project Statistics
 
-![GitHub repo size](https://img.shields.io/github/repo-size/baloglu321/plate_rec)
-![GitHub language count](https://img.shields.io/github/languages/count/baloglu321/plate_rec)
-![GitHub top language](https://img.shields.io/github/languages/top/baloglu321/plate_rec)
-![GitHub last commit](https://img.shields.io/github/last-commit/baloglu321/plate_rec)
-![GitHub issues](https://img.shields.io/github/issues/baloglu321/plate_rec)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/baloglu321/plate_rec)
-
----
-
-### ⭐ If you find this project useful, please consider giving it a star!
-
-### 🔄 Stay Updated
-Watch this repository to get notified about new releases and updates
-
-### 🤝 Connect & Collaborate
-Open to collaborations and improvements - let's build something great together!
-
----
-
-**Made with ❤️ by [Mehmet Baloglu](https://github.com/baloglu321)**
+**Made with ❤️ by [Mehmet Emin Baloglu](https://github.com/baloglu321)**
 
 *Turkish License Plate Recognition System - Real-time detection with encrypted watchlist management*
 
