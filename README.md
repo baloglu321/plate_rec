@@ -347,9 +347,9 @@ flowchart LR
     I --> J[Display Result]
     
     style C fill:#4CAF50
-    style F fill:#2196F3
+    style F fill:#2196F3,stroke:#333,stroke-width:3px,color:#000
     style H fill:#FFC107,stroke:#333,stroke-width:3px,color:#000
-    style J fill:#FF4B4B
+    style J fill:#FF4B4B,stroke:#333,stroke-width:3px,color:#000
 ```
 
 ### 2. Turkish Plate Format
