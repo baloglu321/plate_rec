@@ -335,50 +335,21 @@ The main application includes several pages:
 ### 1. License Plate Detection Flow
 
 ```mermaid
-sequenceDiagram
-    participant User
-    participant UI as Streamlit UI
-    participant VS as Video Stream
-    participant VP as VideoProcessor
-    participant Y as YOLOv5
-    participant P as Preprocessor
-    participant OCR as PaddleOCR
-    participant F as Filter
-    participant K as Keywords
+flowchart LR
+    A[Video Stream] --> B[VideoProcessor]
+    B --> C[YOLOv5 Detection]
+    C --> D[Crop Plate]
+    D --> E[Preprocess Image]
+    E --> F[PaddleOCR]
+    F --> G[Validate Format]
+    G --> H[Check Watchlist]
+    H --> I[Draw Label]
+    I --> J[Display Result]
     
-    User->>UI: Access Camera View
-    UI->>VP: Request Frame
-    VS->>VP: Video Frame
-    
-    VP->>Y: Send Frame
-    Y->>Y: Detect Plates
-    Y->>VP: Bounding Boxes
-    
-    Note over VP,K: For Each Detection (Loop)
-    
-    VP->>P: Crop Plate Region
-    P->>P: Resize (1.2x)<br/>Detail Enhance<br/>Grayscale<br/>Dilate & Erode
-    P->>OCR: Enhanced Image
-    
-    OCR->>OCR: Text Recognition
-    OCR->>F: Raw OCR Text
-    
-    F->>F: Validate Turkish<br/>Plate Format<br/>(XX-YYY-ZZZZZ)
-    
-    alt Valid Format
-        F->>K: Check Keywords
-        K->>K: Decrypt & Match
-        K->>F: Match Result
-        F->>VP: Plate + Match Status
-    else Invalid Format
-        F->>VP: Empty Result
-    end
-    
-    Note over VP,K: End Loop
-    
-    VP->>VP: Draw Labels<br/>(Green=Match, Red=No Match)
-    VP->>UI: Annotated Frame
-    UI->>User: Display Result
+    style C fill:#4CAF50
+    style F fill:#2196F3
+    style H fill:#FFC107
+    style J fill:#FF4B4B
 ```
 
 ### 2. Turkish Plate Format
