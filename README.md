@@ -6,9 +6,6 @@ A real-time license plate recognition system designed for Turkish license plates
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.0+-FF4B4B.svg)](https://streamlit.io)
 [![YOLOv5](https://img.shields.io/badge/YOLOv5-Custom-yellow.svg)](https://github.com/ultralytics/yolov5)
 
-## 📸 Screenshots
-
-> **Note**: Add screenshots of your application here to help users understand the interface
 
 ### Login Page
 - User authentication interface
