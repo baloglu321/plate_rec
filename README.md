@@ -336,26 +336,47 @@ The main application includes several pages:
 
 ```mermaid
 sequenceDiagram
-    participant V as Video Stream
+    participant User
+    participant UI as Streamlit UI
+    participant VS as Video Stream
     participant VP as VideoProcessor
     participant Y as YOLOv5
     participant P as Preprocessor
-    participant O as PaddleOCR
+    participant OCR as PaddleOCR
     participant F as Filter
     participant K as Keywords
-    participant UI as Streamlit UI
     
-    V->>VP: Video Frame
-    VP->>Y: Detect Plates
+    User->>UI: Access Camera View
+    UI->>VP: Request Frame
+    VS->>VP: Video Frame
+    
+    VP->>Y: Send Frame
+    Y->>Y: Detect Plates
     Y->>VP: Bounding Boxes
-    loop For Each Detection
-        VP->>P: Crop & Preprocess
-        P->>O: Enhanced Image
-        O->>F: Raw OCR Text
-        F->>F: Validate Format
+    
+    Note over VP,K: For Each Detection (Loop)
+    
+    VP->>P: Crop Plate Region
+    P->>P: Resize (1.2x)<br/>Detail Enhance<br/>Grayscale<br/>Dilate & Erode
+    P->>OCR: Enhanced Image
+    
+    OCR->>OCR: Text Recognition
+    OCR->>F: Raw OCR Text
+    
+    F->>F: Validate Turkish<br/>Plate Format<br/>(XX-YYY-ZZZZZ)
+    
+    alt Valid Format
         F->>K: Check Keywords
-        K->>VP: Match Result
+        K->>K: Decrypt & Match
+        K->>F: Match Result
+        F->>VP: Plate + Match Status
+    else Invalid Format
+        F->>VP: Empty Result
     end
+    
+    Note over VP,K: End Loop
+    
+    VP->>VP: Draw Labels<br/>(Green=Match, Red=No Match)
     VP->>UI: Annotated Frame
     UI->>User: Display Result
 ```
