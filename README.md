@@ -803,23 +803,6 @@ server {
 
 
 
-### What This Means
-
-✅ **You Can:**
-- Use commercially
-- Modify and distribute
-- Use privately
-- Use patent claims from contributors
-
-⚠️ **You Must:**
-- Include license and copyright notice
-- State significant changes made
-- Include NOTICE file if provided
-
-❌ **You Cannot:**
-- Hold the author liable
-- Use trademarks without permission
-
 ### Third-Party Licenses
 
 This project uses several open-source components:
@@ -845,16 +828,6 @@ Please review their respective licenses for compliance.
 - Accuracy of license plate recognition
 - Privacy violations due to improper use
 
-**Recommended Use Cases:**
-- ✅ Private property security (with proper signage)
-- ✅ Parking management systems
-- ✅ Research and development
-- ✅ Educational purposes
-
-**Not Recommended For:**
-- ❌ Mass surveillance without legal authority
-- ❌ Tracking individuals without consent
-- ❌ Law enforcement without proper authorization
 
 ## 🤝 Contributing
 
